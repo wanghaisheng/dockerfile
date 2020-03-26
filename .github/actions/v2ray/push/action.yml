@@ -1,0 +1,14 @@
+name: Push
+description: Push v2ray image
+
+inputs:
+  username:
+    description: 'Docker hub username'
+    required: true
+  password:
+    description: 'Docker hub password'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'index.js'
