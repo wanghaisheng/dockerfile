@@ -5,8 +5,8 @@ inputs:
   username:
     description: 'Docker hub username'
     required: true
-  password:
-    description: 'Docker hub password'
+  accesstoken:
+    description: 'Docker hub access token'
     required: true
 
 runs:
