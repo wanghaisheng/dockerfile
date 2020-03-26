@@ -12,6 +12,6 @@ const version = require('../../../../v2ray/version.json');
   await exec.exec('docker', ['login', '-u', username, '-p', password], options);
   console.log(`Build v2ray image with tag '${version.version}'.`);
   await exec.exec('docker', ['push', `tarocch1/v2ray:${version.version}`], options);
-  console.log('Push v2ray image with tag \'latest\'.');
+  console.log("Push v2ray image with tag 'latest'.");
   await exec.exec('docker', ['push', 'tarocch1/v2ray:latest'], options);
 })();
