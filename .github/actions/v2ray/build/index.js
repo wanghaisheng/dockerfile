@@ -1,7 +1,7 @@
 const exec = require('@actions/exec');
 const version = require('../../../../v2ray/version.json');
 
-(async function() {
+(async function () {
   const options = {
     cwd: './v2ray',
   };

@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const exec = require('@actions/exec');
 const version = require('../../../../v2ray/version.json');
 
-(async function() {
+(async function () {
   const username = core.getInput('username', { required: true });
   const accesstoken = core.getInput('accesstoken', { required: true });
   const options = {
