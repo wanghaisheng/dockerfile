@@ -1,0 +1,14 @@
+name: Push
+description: Push mirai image
+
+inputs:
+  username:
+    description: 'Docker hub username'
+    required: true
+  accesstoken:
+    description: 'Docker hub access token'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'index.js'

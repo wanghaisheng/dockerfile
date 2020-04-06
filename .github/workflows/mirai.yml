@@ -1,0 +1,32 @@
+name: mirai
+
+on:
+  push:
+    paths:
+      - 'mirai/Dockerfile'
+
+jobs:
+  build_and_push:
+    name: Build and Push
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@master
+      - id: setup_nodejs
+        name: Setup node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - id: npm_ci
+        name: npm ci
+        run: npm ci
+      - id: build
+        name: Build mirai image
+        uses: ./.github/actions/mirai/build
+      - id: push
+        name: Push mirai image
+        uses: ./.github/actions/mirai/push
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          accesstoken: ${{ secrets.DOCKER_ACCESSTOKEN }}

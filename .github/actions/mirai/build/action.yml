@@ -1,0 +1,6 @@
+name: Build
+description: Build mirai image
+
+runs:
+  using: 'node12'
+  main: 'index.js'
