@@ -6,7 +6,7 @@ RUN set -ex && \
     apk --no-cache add ca-certificates && \
     mkdir plugins && \
     wget https://github.com/mamoe/mirai-console/releases/download/wrapper-0.2.0/mirai-console-wrapper-0.2.0-all.jar && \
-    wget -P plugins https://github.com/mamoe/mirai-api-http/releases/download/v1.6.2/mirai-api-http-v1.6.2.jar && \
+    wget -P plugins https://github.com/mamoe/mirai-api-http/releases/download/v1.6.3/mirai-api-http-v1.6.3.jar && \
     wget -P plugins https://github.com/ryoii/mirai-console-addition/releases/download/v0.2.3/mirai-console-addition-V0.2.3.jar
 
 CMD ["java", "-jar", "mirai-console-wrapper-0.2.0-all.jar"]
