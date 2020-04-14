@@ -8,7 +8,7 @@
 
 | 组件                                                                      | 版本  |
 | ------------------------------------------------------------------------- | ----- |
-| [mirai-console-wrapper](https://github.com/mamoe/mirai-console)           | 0.2.0 |
+| [mirai-console-wrapper](https://github.com/mamoe/mirai-console)           | 0.3.0 |
 | [mirai-api-http](https://github.com/mamoe/mirai-api-http)                 | 1.6.3 |
 | [mirai-console-addition](https://github.com/ryoii/mirai-console-addition) | 0.2.3 |
 
