@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'mirai/Dockerfile'
+      - 'mirai/mirai.sh'
 
 jobs:
   build_and_push:
