@@ -13,8 +13,6 @@
 
 ## Usage
 
-推荐使用 `docker attach` 命令在容器启动后接入 java 进程的 STDIN，以选择 console 版本以及登录 QQ。
-
 ```shell
 docker run --name mirai -dit -e MIRAI_ACCOUNT=1234567890 -e MIRAI_PASSWORD=password tarocch1/mirai
 docker attach mirai
