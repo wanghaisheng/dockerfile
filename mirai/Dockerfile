@@ -8,7 +8,7 @@ RUN set -ex && \
     apk --no-cache add ca-certificates curl && \
     mkdir plugins && \
     wget -O mirai-console-wrapper.jar https://github.com/mamoe/mirai-console-wrapper/releases/download/1.2.0/mirai-console-wrapper-1.2.0-all.jar && \
-    wget -P plugins https://github.com/mamoe/mirai-api-http/releases/download/v1.7.0/mirai-api-http-v1.7.0.jar && \
+    wget -P plugins https://github.com/mamoe/mirai-api-http/releases/download/v1.7.1/mirai-api-http-v1.7.1.jar && \
     chmod 755 mirai.sh
 
 HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
