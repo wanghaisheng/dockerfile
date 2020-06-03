@@ -2,8 +2,8 @@
 
 set -ex
 
-if [ -n "${MIRAI_UPDATE}" ]; then
-  MIRAI_UPDATE = "STABLE"
+if [ ! -n "${MIRAI_UPDATE}" ]; then
+  MIRAI_UPDATE="STABLE"
 fi
 
 if [ -n "${MIRAI_ACCOUNT}" ] && [ -n "${MIRAI_PASSWORD}" ]; then
