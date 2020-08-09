@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'v2ray/version.json'
+      - '.github/workflows/v2ray.yml'
+      - '.github/actions/v2ray/**'
 
 jobs:
   build_and_push:
