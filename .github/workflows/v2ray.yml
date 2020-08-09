@@ -33,3 +33,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           accesstoken: ${{ secrets.DOCKER_ACCESSTOKEN }}
+      - id: push-aliyun
+        name: Push v2ray image to aliyun
+        uses: ./.github/actions/v2ray/push-aliyun
+        with:
+          username: ${{ secrets.ALIYUN_DOCKER_USERNAME }}
+          password: ${{ secrets.ALIYUN_DOCKER_PASSWORD }}

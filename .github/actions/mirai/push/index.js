@@ -8,7 +8,11 @@ const exec = require('@actions/exec');
     cwd: './mirai',
   };
   console.log(`Login to docker hub with user '${username}'.`);
-  await exec.exec('docker', ['login', '-u', username, '-p', accesstoken], options);
+  await exec.exec(
+    'docker',
+    ['login', '-u', username, '-p', accesstoken],
+    options,
+  );
   console.log("Push mirai image with tag 'latest'.");
   await exec.exec('docker', ['push', 'tarocch1/mirai:latest'], options);
 })();

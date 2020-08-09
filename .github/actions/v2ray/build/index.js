@@ -6,7 +6,15 @@ const version = require('../../../../v2ray/version.json');
     cwd: './v2ray',
   };
   console.log(`Build v2ray image with tag '${version.version}'.`);
-  await exec.exec('docker', ['build', '-t', `tarocch1/v2ray:${version.version}`, '.'], options);
+  await exec.exec(
+    'docker',
+    ['build', '-t', `tarocch1/v2ray:${version.version}`, '.'],
+    options,
+  );
   console.log("Create tag 'latest'.");
-  await exec.exec('docker', ['tag', `tarocch1/v2ray:${version.version}`, 'tarocch1/v2ray:latest'], options);
+  await exec.exec(
+    'docker',
+    ['tag', `tarocch1/v2ray:${version.version}`, 'tarocch1/v2ray:latest'],
+    options,
+  );
 })();

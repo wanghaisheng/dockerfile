@@ -5,5 +5,9 @@ const exec = require('@actions/exec');
     cwd: './mirai',
   };
   console.log("Build mirai image with tag 'latest'.");
-  await exec.exec('docker', ['build', '-t', 'tarocch1/mirai:latest', '.'], options);
+  await exec.exec(
+    'docker',
+    ['build', '-t', 'tarocch1/mirai:latest', '.'],
+    options,
+  );
 })();
