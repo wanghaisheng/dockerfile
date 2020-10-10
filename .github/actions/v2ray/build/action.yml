@@ -1,6 +1,0 @@
-name: Build
-description: Build v2ray image
-
-runs:
-  using: 'node12'
-  main: 'index.js'

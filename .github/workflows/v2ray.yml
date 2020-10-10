@@ -3,9 +3,8 @@ name: v2ray
 on:
   push:
     paths:
-      - 'v2ray/version.json'
+      - 'v2ray/**'
       - '.github/workflows/v2ray.yml'
-      - '.github/actions/v2ray/**'
 
 jobs:
   build_and_push:
@@ -14,30 +13,28 @@ jobs:
     steps:
       - id: checkout
         name: Checkout
-        uses: actions/checkout@master
-      - id: setup_nodejs
-        name: Setup node.js
-        uses: actions/setup-node@master
-        with:
-          node-version: 12
-      - id: npm_ci
-        name: npm ci
-        run: npm ci
-      - id: download
-        name: Download v2ray
-        uses: ./.github/actions/v2ray/download
-      - id: build
-        name: Build v2ray image
-        uses: ./.github/actions/v2ray/build
-      - id: push
-        name: Push v2ray image
-        uses: ./.github/actions/v2ray/push
+        uses: actions/checkout@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
-          accesstoken: ${{ secrets.DOCKER_ACCESSTOKEN }}
-      - id: push-aliyun
-        name: Push v2ray image to aliyun
-        uses: ./.github/actions/v2ray/push-aliyun
+          password: ${{ secrets.DOCKER_ACCESSTOKEN }}
+      - name: Login to Aliyun
+        uses: docker/login-action@v1
         with:
+          registry: registry.cn-hongkong.aliyuncs.com
           username: ${{ secrets.ALIYUN_DOCKER_USERNAME }}
           password: ${{ secrets.ALIYUN_DOCKER_PASSWORD }}
+      - name: Setup QEMU
+        id: qemu
+        uses: docker/setup-qemu-action@v1
+        with:
+          platforms: all
+      - name: Setup Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: latest
+      - name: Build
+        id: build
+        run: bash v2ray/build.sh

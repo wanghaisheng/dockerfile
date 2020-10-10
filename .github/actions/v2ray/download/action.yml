@@ -1,6 +1,0 @@
-name: Download
-description: Download v2ray
-
-runs:
-  using: 'node12'
-  main: 'index.js'
