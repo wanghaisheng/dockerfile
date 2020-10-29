@@ -21,7 +21,8 @@ RUN set -ex && \
     apk --no-cache add ca-certificates && \
     mkdir /var/log/v2ray/ && \
     chmod +x /usr/local/bin/v2ray/v2ray && \
-    chmod +x /usr/local/bin/v2ray/v2ctl
+    chmod +x /usr/local/bin/v2ray/v2ctl && \
+    /usr/local/bin/v2ray/v2ray --version
 
 ENV PATH /usr/local/bin/v2ray:$PATH
 
