@@ -1,6 +1,7 @@
 name: v2ray
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'v2ray/**'
