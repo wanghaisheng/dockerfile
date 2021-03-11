@@ -20,7 +20,7 @@ RUN set -ex && \
     apk --no-cache add ca-certificates && \
     mkdir /var/log/xray/ && \
     chmod +x /usr/local/bin/xray/xray && \
-    /usr/local/bin/xray/xray --version
+    /usr/local/bin/xray/xray version
 
 ENV PATH /usr/local/bin/xray:$PATH
 
