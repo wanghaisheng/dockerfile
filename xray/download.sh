@@ -7,7 +7,7 @@ case ${TARGETPLATFORM} in
   linux/arm/v7) FILENAME="Xray-linux-arm32-v7a.zip";;
   linux/arm/v6) FILENAME="Xray-linux-arm32-v6.zip";;
   linux/riscv64) FILENAME="Xray-linux-riscv64.zip";;
-  linux/ppc64le) FILENAME="Xray-linux-rppc64le.zip";;
+  linux/ppc64le) FILENAME="Xray-linux-ppc64le.zip";;
   linux/s390x) FILENAME="Xray-linux-s390x.zip";;
   linux/mips64) FILENAME="Xray-linux-mips64.zip";;
   linux/mips64le) FILENAME="Xray-linux-mips64le.zip";;
