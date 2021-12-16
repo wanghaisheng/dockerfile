@@ -10,7 +10,7 @@ jobs:
   build_and_push:
     name: Build and Push
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - id: checkout
         name: Checkout
