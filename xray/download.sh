@@ -1,5 +1,3 @@
-read VERSION < ./version
-
 case ${TARGETPLATFORM} in
   linux/amd64) FILENAME="Xray-linux-64.zip";;
   linux/386) FILENAME="Xray-linux-32.zip";;
@@ -14,7 +12,7 @@ case ${TARGETPLATFORM} in
   *) FILENAME="Xray-linux-64.zip";;
 esac
 
-URL="https://github.com/XTLS/Xray-core/releases/download/v${VERSION}/${FILENAME}"
+URL="https://github.com/XTLS/Xray-core/releases/latest/download/${FILENAME}"
 
 wget ${URL} -O xray.zip
 
